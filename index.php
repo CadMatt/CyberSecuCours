@@ -57,7 +57,7 @@ switch ($page) {
         }
         break;
     default:
-        echo "<h1>Acceuil</h1>";
+        require_once "src/accueil.php";
         break;
 
 }

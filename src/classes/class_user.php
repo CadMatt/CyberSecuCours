@@ -49,5 +49,11 @@ class User{
         }
 
     }
+    public function getUsers(){
+        $sql = 'select nom, prenom, age, email, dateNaissance, dateInscription, tel, codePostal, rue, ville, annee from User';
+        $sth = $this->dbh->prepare($sql);
+        $sth->execute();
+        return $sth->fetchAll(PDO::FETCH_ASSOC);
+    }
 }
 ?>
